@@ -26,7 +26,13 @@ SECRET_KEY = 'django-insecure-q#j)xitm8t@gi(tyvs1(mnb9ocb61f!d@h31-yj!_66ebkx_fu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "petwellnessweb.onrender.com",  # Add your Render domain
+    "petwellnessvets.com",  # Add your custom GoDaddy domain
+    "www.petwellnessvets.com",
+]
 
 
 # Application definition
@@ -131,3 +137,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # If you have a 'static' folder in your project
 ]
+
+
