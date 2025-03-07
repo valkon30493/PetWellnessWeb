@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'clinic'
+    'clinic',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'vet_clinic_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,4 +139,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # If you have a 'static' folder in your project
 ]
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.office365.com"  # Microsoft 365 SMTP server
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "contact@petwellnessvets.com"  # Your business email
+EMAIL_HOST_PASSWORD = "your-email-password"  # Use App Password if 2FA is enabled
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 

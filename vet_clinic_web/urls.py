@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-path('', include('clinic.urls')),  # Connects to clinic app URLs
+    path('admin/', admin.site.urls),  # Admin panel
+    path('', include('clinic.urls')),  # Connects to the clinic app URLs
+    path('contact/', include('contact.urls')),  # Connects to the contact app URLs
 ]
+
