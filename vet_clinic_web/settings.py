@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q#j)xitm8t@gi(tyvs1(mnb9ocb61f!d@h31-yj!_66ebkx_fu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -32,6 +32,11 @@ ALLOWED_HOSTS = [
     "petwellnessweb.onrender.com",  # Add your Render domain
     "petwellnessvets.com",  # Add your custom GoDaddy domain
     "www.petwellnessvets.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://petwellnessweb.onrender.com',
+    'https://www.petwellnessvets.com',
 ]
 
 
@@ -147,7 +152,8 @@ EMAIL_HOST_USER = "contact@petwellnessvets.com"  # Your business email
 EMAIL_HOST_PASSWORD = "your-email-password"  # Use App Password if 2FA is enabled
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-MICROSOFT_TENANT_ID = "08fd6265-8cfb-482e-8f28-ff438ac4f5cb"
-MICROSOFT_CLIENT_ID = "01c7b932-9793-4978-84a6-a163f5fca832"
+
+MICROSOFT_TENANT_ID = os.getenv("MICROSOFT_TENANT_ID")
+MICROSOFT_CLIENT_ID = os.getenv("MICROSOFT_CLIENT_ID")
 MICROSOFT_CLIENT_SECRET = os.getenv("MICROSOFT_CLIENT_SECRET")
-MICROSOFT_EMAIL_SENDER = "contact@petwellnessvets.com"
+MICROSOFT_EMAIL_SENDER = os.getenv("MICROSOFT_EMAIL_SENDER")
