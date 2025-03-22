@@ -1,19 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Wellness - Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Welcome to Pet Wellness Vet Clinic</h1>
-    <p>Providing the best care for your pets!</p>
 
-    <nav style="background-color: #28a745; padding: 15px;">
-        <a href="/" style="color: white; margin-right: 20px; text-decoration: none;">Home</a>
-        <a href="/admin/" style="color: white; margin-right: 20px; text-decoration: none;">Admin Panel</a>
-        <a href="/contact/" style="color: white; text-decoration: none;">Contact</a>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/admin/" class="nav-link">Admin Panel</a>
+        <a href="/contact/" class="nav-link">Contact</a>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Compassionate Care for Your Pets</h1>
+        <p>Your trusted local veterinary clinic providing expert care and love for every furry friend.</p>
+        <a href="/contact/" class="hero-btn">Book an Appointment</a>
+    </section>
 
 </body>
 </html>

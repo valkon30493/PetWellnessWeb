@@ -79,3 +79,53 @@ body {
     max-width: 600px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+/* Navigation bar */
+.nav-bar {
+    background-color: #28a745;
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-btn {
+    background: #28a745;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #218838;
+}
