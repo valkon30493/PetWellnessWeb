@@ -7,36 +7,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Contact form container */
 .contact-container {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 400px;
-    box-sizing: border-box; /* Prevents extra spacing */
-    margin: auto; /* Centers horizontally */
+    max-width: 450px;
+    box-sizing: border-box;
+    margin: 40px auto;
 }
 
-/* Form fields */
+/* Form labels */
 .contact-container label {
     font-weight: bold;
     display: block;
-    margin: 10px 0 5px;
+    margin: 12px 0 6px;
 }
 
+/* Form inputs & textarea */
 .contact-container input,
 .contact-container textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Prevents extra width issues
+    border-radius: 6px;
+    box-sizing: border-box; /* Prevents extra width issues */
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 3px #28a74555;
+    outline: none;
 }
 
 /* Submit button */
@@ -44,11 +54,12 @@ body {
     background: #28a745;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
 }
 
 .contact-container button:hover {
@@ -59,10 +70,12 @@ body {
 .success-message {
     background-color: #d4edda;
     color: #155724;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px 20px;
+    margin: 20px auto;
     border: 1px solid #c3e6cb;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
+    font-size: 1.1rem;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-
