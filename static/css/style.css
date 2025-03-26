@@ -150,3 +150,20 @@ body {
 .footer-link:hover {
     text-decoration: underline;
 }
+
+/* Page layout to stick footer to bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero {
+    flex: 1; /* This lets the hero section grow and push footer down */
+}
