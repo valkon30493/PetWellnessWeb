@@ -1,83 +1,14 @@
-/* General styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Global layout for sticky footer */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.page-wrapper {
     min-height: 100vh;
-}
-
-/* Contact form container */
-.contact-container {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 450px;
-    box-sizing: border-box;
-    margin: 40px auto;
-}
-
-/* Form labels */
-.contact-container label {
-    font-weight: bold;
-    display: block;
-    margin: 12px 0 6px;
-}
-
-/* Form inputs & textarea */
-.contact-container input,
-.contact-container textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box; /* Prevents extra width issues */
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contact-container input:focus,
-.contact-container textarea:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 3px #28a74555;
-    outline: none;
-}
-
-/* Submit button */
-.contact-container button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-}
-
-.contact-container button:hover {
-    background: #218838;
-}
-
-/* Success message styling */
-.success-message {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px 20px;
-    margin: 20px auto;
-    border: 1px solid #c3e6cb;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.1rem;
-    max-width: 600px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation bar */
@@ -89,81 +20,65 @@ body {
 
 .nav-link {
     color: white;
+    margin: 0 15px;
     text-decoration: none;
-    margin: 0 20px;
     font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa;
+    flex: 1;
+    padding: 60px 20px;
     text-align: center;
-    padding: 80px 20px 60px;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
+    color: #333;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 25px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #555;
+    margin-bottom: 30px;
 }
 
 .hero-btn {
-    background: #28a745;
+    display: inline-block;
+    background-color: #28a745;
     color: white;
-    padding: 12px 30px;
+    padding: 12px 24px;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .hero-btn:hover {
-    background: #218838;
+    background-color: #218838;
 }
 
-/* Footer Styling */
+/* Footer */
 .footer {
     background-color: #f1f1f1;
     text-align: center;
-    padding: 25px 15px;
-    font-size: 0.95rem;
-    color: #555;
-    margin-top: 60px;
-    border-top: 1px solid #ccc;
+    padding: 20px;
+    color: #333;
+    font-size: 0.9rem;
 }
 
 .footer-link {
     color: #28a745;
     text-decoration: none;
-    margin: 0 8px;
+    margin: 0 5px;
 }
 
 .footer-link:hover {
     text-decoration: underline;
-}
-
-/* Page layout to stick footer to bottom */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.page-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.hero {
-    flex: 1; /* This lets the hero section grow and push footer down */
 }
