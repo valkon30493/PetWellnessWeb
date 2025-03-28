@@ -1,88 +1,14 @@
-/* Global layout for sticky footer */
-html, body {
-    height: 100%;
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-.page-wrapper {
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
-/* Navigation bar */
-.nav-bar {
-    background-color: #28a745;
-    padding: 15px;
-    text-align: center;
-}
-
-.nav-link {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #f8f9fa;
-    flex: 1;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.hero-btn {
-    display: inline-block;
-    background-color: #28a745;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.hero-btn:hover {
-    background-color: #218838;
-}
-
-/* Footer */
-.footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 20px;
-    color: #333;
-    font-size: 0.9rem;
-}
-
-.footer-link {
-    color: #28a745;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
-}
-
 
 /* Contact form container */
 .contact-container {
