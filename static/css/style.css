@@ -82,3 +82,9 @@ html, body {
 .footer-link:hover {
     text-decoration: underline;
 }
+
+.logo {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
