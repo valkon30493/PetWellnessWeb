@@ -8,7 +8,7 @@ def contact_view(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            # form.save()
+            form.save()
 
             # Send email to the admin
             subject = f"New Inquiry from {form.cleaned_data['name']}"
