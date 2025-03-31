@@ -8,7 +8,7 @@ def contact_view(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
+            # form.save()
 
             # Send email to the admin
             subject = f"New Inquiry from {form.cleaned_data['name']}"
@@ -16,8 +16,8 @@ def contact_view(request):
             recipient = "contact@petwellnessvets.com"
 
             try:
-                send_email(subject, message, recipient)  # Send admin notification
-                send_auto_reply(form.cleaned_data['email'], form.cleaned_data['name'])  # Send auto-reply to user
+                # send_email(subject, message, recipient)  # Send admin notification
+                # send_auto_reply(form.cleaned_data['email'], form.cleaned_data['name'])  # Send auto-reply to user
                 success_message = "Your message has been sent successfully!"
             except Exception as e:
                 success_message = f"Failed to send email: {str(e)}"
