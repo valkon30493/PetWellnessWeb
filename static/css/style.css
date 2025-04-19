@@ -167,3 +167,43 @@ html, body {
 .return-link:hover {
     text-decoration: underline;
 }
+
+.map-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.map-container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.coming-soon {
+    background-color: #ffffff;
+    padding: 50px 20px 30px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.coming-soon h2 {
+    color: #28a745;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.coming-soon p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
