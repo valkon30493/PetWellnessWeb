@@ -1,4 +1,4 @@
-/* Global layout for sticky footer */
+/* Global layout */
 html, body {
     height: 100%;
     margin: 0;
@@ -16,19 +16,21 @@ html, body {
 /* Navigation bar */
 .nav-bar {
     background-color: #28a745;
-    padding: 10px 30px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 45px;
 }
 
 .nav-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -95,7 +97,7 @@ html, body {
     text-decoration: underline;
 }
 
-/* Contact form container */
+/* Contact Form */
 .contact-container {
     background: white;
     padding: 20px;
@@ -107,7 +109,6 @@ html, body {
     margin: 40px auto;
 }
 
-/* Form fields */
 .contact-container label {
     font-weight: bold;
     display: block;
@@ -124,7 +125,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Submit button */
 .contact-container button {
     background: #28a745;
     color: white;
@@ -140,7 +140,7 @@ html, body {
     background: #218838;
 }
 
-/* Success message styling */
+/* Success Message */
 .success-message {
     background-color: #d4edda;
     color: #155724;
@@ -154,7 +154,7 @@ html, body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Reusable return link */
+/* Return link */
 .return-link {
     display: inline-block;
     margin-top: 20px;
@@ -168,25 +168,7 @@ html, body {
     text-decoration: underline;
 }
 
-.map-section {
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-.map-section h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.map-container {
-    max-width: 600px;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
+/* Coming soon section */
 .coming-soon {
     background-color: #ffffff;
     padding: 50px 20px 30px;
@@ -206,4 +188,60 @@ html, body {
     color: #555;
     max-width: 700px;
     margin: 0 auto;
+}
+
+/* Map section */
+.map-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.map-container {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .coming-soon h2 {
+        font-size: 1.5rem;
+    }
 }
