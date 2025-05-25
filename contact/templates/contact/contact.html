@@ -2,10 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Pet Wellness Vets | Expert Veterinary Care</title>
+  <meta name="description" content="Contact Pet Wellness Vets in Chloraka, Paphos. Send us a message, book appointments, and let us care for your beloved pets.">
+
+  <!-- Open Graph for social media -->
+  <meta property="og:title" content="Contact Pet Wellness Vets">
+  <meta property="og:description" content="Get in touch with our veterinary clinic in Chlorakas, Paphos.">
+  <meta property="og:image" content="{{ request.build_absolute_uri }}{% static 'images/logo.png' %}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
 </head>
 <body>
     <div class="contact-container">
